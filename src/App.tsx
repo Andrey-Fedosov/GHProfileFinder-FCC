@@ -1,11 +1,12 @@
 import React from "react";
 
 import "./App.css";
+import { GithubProfileFinder } from "./components/githubProfileFinder/GithubProfileFinder";
 
 function App() {
   return (
     <div className="App">
-      <div>Hello</div>
+      <GithubProfileFinder />
     </div>
   );
 }
