@@ -1,5 +1,6 @@
 import React from "react";
 import { githubUserType } from "./types";
+import "./styles.css";
 
 type UserPropsType = {
   user: githubUserType;
@@ -24,7 +25,7 @@ export function User(props: UserPropsType) {
       <div>
         <img src={avatar_url} className="avatar" alt="user photo" />
       </div>
-      <div>
+      <div className="name-container">
         <a href={html_url}>{name || login}</a>
         <p>
           User joined on{" "}
@@ -35,17 +36,19 @@ export function User(props: UserPropsType) {
           })}`}
         </p>
       </div>
-      <div>
-        <p>Public Repos</p>
-        <p>{public_repos}</p>
-      </div>
-      <div>
-        <p>Followers</p>
-        <p>{followers}</p>
-      </div>
-      <div>
-        <p>Followers</p>
-        <p>{followers}</p>
+      <div className="profile-info">
+        <div>
+          <p>Public Repos</p>
+          <p>{public_repos}</p>
+        </div>
+        <div>
+          <p>Followers</p>
+          <p>{followers}</p>
+        </div>
+        <div>
+          <p>Following</p>
+          <p>{following}</p>
+        </div>
       </div>
     </div>
   );

@@ -48,7 +48,7 @@ export function GithubProfileFinder() {
         <button onClick={handleSubmit}>find profile</button>
       </div>
       <div className="user-profile-box ">
-        <p>Github {userName} profile</p>
+        {/* <p>Github {userName} profile</p> */}
         {userData !== null ? <User user={userData} /> : null}
       </div>
     </div>
